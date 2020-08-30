@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class HbaseDataSyncEsObserver implements RegionObserver, RegionCoprocessor {
     private static final Logger LOG = LoggerFactory.getLogger(HbaseDataSyncEsObserver.class);
@@ -17,6 +18,8 @@ public class HbaseDataSyncEsObserver implements RegionObserver, RegionCoprocesso
     }
 
     public void start(CoprocessorEnvironment env) throws IOException {
+        ClassLoader classLoader = env.getClassLoader();
+        URL resource = classLoader.getResource("");
 
     }
 
